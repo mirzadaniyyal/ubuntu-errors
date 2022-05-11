@@ -1,0 +1,13 @@
+nano /etc/apt/sources.list 
+remove all data and paste init
+deb cdrom:[elementary OS 0.3 _Freya_ – Daily amd64 (20150208)]/ trusty main restricted
+deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse
+
+Look at the first line in the above list. It includes cdrom. We need to comment out this line by adding # in front of it to make it look like this:
+#deb cdrom:[elementary OS 0.3 _Freya_ – Daily amd64 (20150208)]/ trusty main restricted
+now run apt update
